@@ -113,7 +113,7 @@ const createPostData = (body, type) => {
 export const buildHarRequest = ({ request, headers, type }) => {
   return {
     method: request.method,
-    url: encodeURI(request.url),
+    url: request.url,
     httpVersion: 'HTTP/1.1',
     cookies: [],
     headers: createHeaders(request, headers),
